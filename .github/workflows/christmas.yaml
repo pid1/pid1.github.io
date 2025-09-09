@@ -20,7 +20,7 @@ jobs:
         run: |
           for f in $(find . -name '*.html'); do
             if grep -q 'class="snowflakes"' "$f"; then
-              sed -i '/<div class="snowflakes" aria-hidden="true">/,/<\/div>/d' "$f"
+              awk 'BEGIN{d=0} /<div class="snowflakes" aria-hidden="true">/{d=1} d{if(/<div/)c++; if(/<\/div>/)c--; if(c<=0){d=0; c=0; next}} !d{print}' "$f" > "$f.tmp" && mv "$f.tmp" "$f"
             else
               awk '/<\/body>/ { system("cat snowflakes.txt") } { print }' "$f" > "$f.tmp" && mv "$f.tmp" "$f"
             fi
