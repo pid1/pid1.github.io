@@ -18,7 +18,7 @@ jobs:
 
       - name: Add or remove snowflakes
         run: |
-          SNOWFLAKE_HTML="$(cat snowflakes.html)"
+          SNOWFLAKE_HTML="$(cat snowflakes.txt)"
           for f in $(find . -name '*.html'); do
             if grep -q 'class="snowflakes"' "$f"; then
               sed -i '/<div class="snowflakes" aria-hidden="true">/,/<\/div>/d' "$f"
