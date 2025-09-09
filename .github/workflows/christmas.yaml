@@ -18,15 +18,11 @@ jobs:
 
       - name: Add or remove snowflakes
         run: |
-          SNOWFLAKE_HTML="$(cat snowflakes.txt)"
           for f in $(find . -name '*.html'); do
             if grep -q 'class="snowflakes"' "$f"; then
               sed -i '/<div class="snowflakes" aria-hidden="true">/,/<\/div>/d' "$f"
             else
-              awk -v snowflakes="$SNOWFLAKE_HTML" '
-                /<\/body>/ { print snowflakes }
-                { print }
-              ' "$f" > "$f.tmp" && mv "$f.tmp" "$f"
+              awk '/<\/body>/ { system("cat snowflakes.txt") } { print }' "$f" > "$f.tmp" && mv "$f.tmp" "$f"
             fi
           done
 
