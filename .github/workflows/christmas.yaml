@@ -20,7 +20,10 @@ jobs:
             if grep -q 'class="snowflakes"' "$f"; then
               sed -i '/<div class="snowflakes" aria-hidden="true">/,/<\/div>/d' "$f"
             else
-              sed -i "/<\/body>/i $SNOWFLAKE_HTML" "$f"
+              awk -v snowflakes="$SNOWFLAKE_HTML" '
+                /<\/body>/ { print snowflakes }
+                { print }
+              ' "$f" > "$f.tmp" && mv "$f.tmp" "$f"
             fi
           done
 
