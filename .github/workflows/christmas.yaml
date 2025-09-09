@@ -31,9 +31,5 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add .
-          if [ "$(date +%m-%d)" = "11-01" ]; then
-            git commit -m "Add snowflakes for the holidays" || echo "No changes to commit"
-          elif [ "$(date +%m-%d)" = "01-01" ]; then
-            git commit -m "Remove snowflakes after holidays" || echo "No changes to commit"
-          fi
+          git commit -m "Add/remove snowflakes for the holidays" || echo "No changes to commit"
           git push
