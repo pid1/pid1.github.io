@@ -6,6 +6,9 @@ on:
     - cron: '0 0 1 11 *' # November 1st, 00:00 UTC
     - cron: '0 0 1 1 *'  # January 1st, 00:00 UTC
 
+permissions:
+    contents: write
+
 jobs:
   update-snowflakes:
     runs-on: ubuntu-latest
