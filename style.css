@@ -321,7 +321,21 @@ footer hr {
     padding: 0.75rem 0;
   }
 
+  .content-wrap {
+    display: block;
+  }
+
   .solar-sidebar {
-    display: none;
+    position: sticky;
+    bottom: 1rem;
+    width: auto;
+    padding-top: 0;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+  }
+
+  .solar-sidebar a {
+    pointer-events: all;
   }
 }
