@@ -112,10 +112,33 @@ body {
   line-height: 1.6;
 }
 
-main {
-  max-width: 65ch;
+.page-wrapper {
+  max-width: calc(65ch + 175px + 3rem);
   margin: 0 auto;
-  padding: 1rem;
+  padding: 0 1rem;
+}
+
+.content-wrap {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+main {
+  flex: 1;
+  min-width: 0;
+  padding: 1rem 0;
+}
+
+.solar-sidebar {
+  flex-shrink: 0;
+  width: 155px;
+  padding-top: 1rem;
+}
+
+.solar-sidebar img {
+  display: block;
+  width: 155px;
 }
 
 /* === Typography === */
@@ -154,9 +177,7 @@ p {
 /* === Navigation === */
 
 header {
-  max-width: 65ch;
-  margin: 0 auto;
-  padding: 1rem 1rem 0;
+  padding: 1rem 0 0;
 }
 
 nav {
@@ -236,9 +257,7 @@ article p {
 /* === Footer === */
 
 footer {
-  max-width: 65ch;
-  margin: 0 auto;
-  padding: 1rem;
+  padding: 1rem 0;
   color: var(--muted);
   font-size: 0.875rem;
 }
@@ -291,14 +310,18 @@ footer hr {
   }
 
   main {
-    padding: 0.75rem;
+    padding: 0.75rem 0;
   }
 
   header {
-    padding: 0.75rem 0.75rem 0;
+    padding: 0.75rem 0 0;
   }
 
   footer {
-    padding: 0.75rem;
+    padding: 0.75rem 0;
+  }
+
+  .solar-sidebar {
+    display: none;
   }
 }
