@@ -112,10 +112,32 @@ body {
   line-height: 1.6;
 }
 
-main {
-  max-width: 65ch;
+.page-wrapper {
+  width: max-content;
+  max-width: 95vw;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 0 1rem;
+}
+
+.content-wrap {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+main {
+  width: 65ch;
+  flex-shrink: 0;
+  padding: 1rem 0;
+}
+
+.solar-widget {
+  flex-shrink: 0;
+  padding-top: 1rem;
+}
+
+.solar-widget img {
+  display: block;
 }
 
 /* === Typography === */
@@ -154,9 +176,7 @@ p {
 /* === Navigation === */
 
 header {
-  max-width: 65ch;
-  margin: 0 auto;
-  padding: 1rem 1rem 0;
+  padding: 1rem 0 0;
 }
 
 nav {
@@ -236,9 +256,7 @@ article p {
 /* === Footer === */
 
 footer {
-  max-width: 65ch;
-  margin: 0 auto;
-  padding: 1rem;
+  padding: 1rem 0;
   color: var(--muted);
   font-size: 0.875rem;
 }
@@ -290,15 +308,43 @@ footer hr {
     font-size: 1.15rem;
   }
 
+  .page-wrapper {
+    width: auto;
+    max-width: 100%;
+  }
+
+  .content-wrap {
+    display: block;
+  }
+
   main {
-    padding: 0.75rem;
+    width: auto;
+    padding: 0.75rem 0;
   }
 
   header {
-    padding: 0.75rem 0.75rem 0;
+    padding: 0.75rem 0 0;
   }
 
   footer {
-    padding: 0.75rem;
+    padding: 0.75rem 0;
+  }
+
+  .solar-widget {
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 0 1rem;
+    background: var(--bg);
+    pointer-events: none;
+  }
+
+  .solar-widget a {
+    pointer-events: all;
+  }
+
+  .solar-widget img {
+    max-width: 100%;
   }
 }
