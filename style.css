@@ -47,8 +47,6 @@ html {
   --yellow: #4d2d00;
   --magenta: #8250df;
   --cyan: #1b7c83;
-  --matrix-dim: #0e5223;
-  --matrix-bright: #1a9e3f;
 }
 
 /* === Color Scheme: Dark (auto) === */
@@ -68,8 +66,6 @@ html {
     --yellow: #d29922;
     --magenta: #bc8cff;
     --cyan: #39c5cf;
-    --matrix-dim: #0faf3f;
-    --matrix-bright: #7dffa0;
   }
 }
 
@@ -89,8 +85,6 @@ html[data-theme="light"] {
   --yellow: #4d2d00;
   --magenta: #8250df;
   --cyan: #1b7c83;
-  --matrix-dim: #0e5223;
-  --matrix-bright: #1a9e3f;
 }
 
 html[data-theme="dark"] {
@@ -107,8 +101,6 @@ html[data-theme="dark"] {
   --yellow: #d29922;
   --magenta: #bc8cff;
   --cyan: #39c5cf;
-  --matrix-dim: #0faf3f;
-  --matrix-bright: #7dffa0;
 }
 
 /* === Layout === */
@@ -249,12 +241,10 @@ code {
   font-size: 0.95em;
 }
 
-/* === Matrix Text (callsign + EchoLink node) === */
+/* === EchoLink node tooltip === */
 
-.matrix-node {
+.leet-node {
   position: relative;
-  font-weight: 700;
-  color: var(--matrix-bright);
 }
 
 .leet-node::after {
@@ -265,7 +255,7 @@ code {
   transform: translateX(-50%);
   background: var(--code-bg);
   border: 1px solid var(--border);
-  color: var(--matrix-bright);
+  color: var(--text);
   font-size: 0.75rem;
   line-height: 1.4;
   padding: 0.05rem 0.4rem;
@@ -296,36 +286,6 @@ code {
   border-bottom-width: 0;
   border-top-color: var(--border);
   z-index: 1;
-}
-
-@supports (background-clip: text) or (-webkit-background-clip: text) {
-  .matrix-node {
-    background: linear-gradient(
-      90deg,
-      var(--matrix-dim),
-      var(--matrix-bright),
-      var(--matrix-dim),
-      var(--matrix-bright),
-      var(--matrix-dim)
-    );
-    background-size: 200% 100%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    animation: matrix-sweep 3s linear infinite;
-  }
-}
-
-@keyframes matrix-sweep {
-  to {
-    background-position: -200% 0;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .matrix-node {
-    animation: none;
-  }
 }
 
 /* === Work Highlights === */
@@ -383,12 +343,6 @@ footer hr {
 
   nav, .theme-toggle {
     display: none;
-  }
-
-  .matrix-node {
-    background: none;
-    color: #000;
-    animation: none;
   }
 
   .leet-node::before,
