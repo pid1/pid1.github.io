@@ -137,10 +137,15 @@ main {
   display: flex;
   justify-content: center;
   padding: 0.5rem 0 1rem;
+  /* Reserve the column so the page does not reflow when the image arrives. */
+  flex: 0 0 155px;
 }
 
 .solar-widget img {
   display: block;
+  width: 155px;
+  height: auto;
+  aspect-ratio: 155 / 530;
   max-width: 100%;
 }
 
