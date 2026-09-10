@@ -313,6 +313,14 @@ article p {
   margin: 0.5rem 0;
 }
 
+/* === Projects === */
+
+.project-status {
+  color: var(--muted);
+  font-weight: 400;
+  font-size: 0.875rem;
+}
+
 /* === Footer === */
 
 footer {
