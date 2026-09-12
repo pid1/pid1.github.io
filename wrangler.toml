@@ -1,0 +1,22 @@
+# pid1.space -- the site itself.
+#
+# Cloudflare Workers Builds deploys this on push to main. GitHub is the git
+# server and nothing else; .github/workflows/cf-fallback.yml only acts when
+# Cloudflare has not.
+
+name = "pid1-site"
+compatibility_date = "2026-09-11"
+
+[assets]
+directory = "./dist"
+# Individual files answer without a trailing slash, folder indexes with one,
+# which is how the site's own links are written.
+html_handling = "auto-trailing-slash"
+
+[[routes]]
+pattern = "pid1.space"
+custom_domain = true
+
+[[routes]]
+pattern = "www.pid1.space"
+custom_domain = true

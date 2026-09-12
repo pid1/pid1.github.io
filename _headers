@@ -1,0 +1,14 @@
+# Response headers for the deployed site. GitHub Pages could not set these at
+# all; on Cloudflare they ship with the assets.
+
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+# Read by .github/workflows/cf-fallback.yml to decide whether Cloudflare has
+# already published the current commit. A cached copy would make a deployed
+# site look stale and trigger a redundant deploy.
+/.build-id
+  Cache-Control: no-store
