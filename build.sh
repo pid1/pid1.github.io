@@ -21,13 +21,6 @@ done
 
 cp -R fonts dist/fonts
 
-# Transitional. /rx moved to its own Worker at rx.pid1.space, reached from the
-# apex through a redirect rule. Until that rule is in place this copy is what
-# answers `curl -fsSL pid1.space/rx`; remove the file and this block together.
-if [ -f rx ]; then
-  install -m 0644 rx dist/rx
-fi
-
 install -m 0644 _headers dist/_headers
 
 # Identifies the deployed commit so the fallback workflow can tell whether
