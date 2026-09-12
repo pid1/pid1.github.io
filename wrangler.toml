@@ -13,10 +13,16 @@ directory = "./dist"
 # which is how the site's own links are written.
 html_handling = "auto-trailing-slash"
 
-[[routes]]
-pattern = "pid1.space"
-custom_domain = true
-
-[[routes]]
-pattern = "www.pid1.space"
-custom_domain = true
+# The apex is still served by GitHub Pages, so its A/AAAA records and the www
+# CNAME still exist. wrangler cannot attach a custom domain to a hostname that
+# already has externally managed DNS records -- it fails the deploy with
+# code 100117 -- so these stay commented until the cutover deletes those
+# records. Uncomment them then, so every later deploy asserts the end state.
+#
+# [[routes]]
+# pattern = "pid1.space"
+# custom_domain = true
+#
+# [[routes]]
+# pattern = "www.pid1.space"
+# custom_domain = true
