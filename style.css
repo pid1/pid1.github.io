@@ -305,7 +305,7 @@ article {
   margin: 2rem 0;
 }
 
-article h2 {
+article h3 {
   margin-bottom: 0.5rem;
 }
 
@@ -314,6 +314,22 @@ article p {
 }
 
 /* === Projects === */
+
+/* The grouping heading carries the space; the first project under it should
+   not add its own on top. */
+.project-group + .project-group {
+  margin-top: 2.5rem;
+}
+
+.project-group > h2 {
+  margin-bottom: 0;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.project-group > article:first-of-type {
+  margin-top: 1rem;
+}
 
 .project-status {
   color: var(--muted);
