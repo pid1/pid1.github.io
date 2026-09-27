@@ -15,6 +15,22 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Cross-fade between pages on same-origin navigation. Browsers without
+   support simply navigate normally. */
+@view-transition {
+  navigation: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  @view-transition {
+    navigation: none;
+  }
+}
+
 /* === Font Face === */
 
 @font-face {
@@ -36,6 +52,7 @@ html {
 /* === Color Scheme: Light (default) === */
 
 :root {
+  color-scheme: light dark;
   --bg: #ffffff;
   --text: #1f2328;
   --accent: #0969da;
@@ -74,6 +91,7 @@ html {
 /* === Manual Theme Overrides === */
 
 html[data-theme="light"] {
+  color-scheme: light;
   --bg: #ffffff;
   --text: #1f2328;
   --accent: #0969da;
@@ -90,6 +108,7 @@ html[data-theme="light"] {
 }
 
 html[data-theme="dark"] {
+  color-scheme: dark;
   --bg: #30363d;
   --text: #e6edf3;
   --accent: #58a6ff;
@@ -156,6 +175,16 @@ h2,
 h3 {
   font-weight: 700;
   line-height: 1.3;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
 }
 
 h1 {
@@ -361,6 +390,22 @@ footer hr {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+/* The skip link stays hidden until a keyboard user tabs to it. */
+.visually-hidden:focus {
+  position: fixed;
+  top: 0.5rem;
+  left: 0.5rem;
+  width: auto;
+  height: auto;
+  padding: 0.25rem 0.5rem;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  z-index: 10;
 }
 
 /* === Print === */
