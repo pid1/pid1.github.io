@@ -9,7 +9,7 @@
 set -euo pipefail
 
 PAGES=(index.html about.html contact.html projects.html)
-ASSETS=(style.css theme.js)
+ASSETS=(style.css theme.js robots.txt sitemap.xml llms.txt)
 
 rm -rf dist
 mkdir -p dist

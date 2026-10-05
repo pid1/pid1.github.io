@@ -1,0 +1,15 @@
+# Jonathan Roemer
+
+> Systems architect and engineering leader with 15+ years across infrastructure, security, compliance, product and AI. Senior Principal Systems Architect at Cytracom, and runs Cygnus Strategy, a boutique consultancy. Amateur radio operator KA1PID.
+
+## Pages
+
+- [About](https://pid1.space/about): background, education and approach
+- [Projects](https://pid1.space/projects): personal projects in AI tooling, full-stack web apps, ham radio and cyber-physical hardware
+- [Contact](https://pid1.space/contact): email, GitHub, LinkedIn and ham radio nodes
+
+## Elsewhere
+
+- [Cygnus Strategy](https://cygnusstrategy.com/): fractional CTO, CPO, CISO and COO leadership, and apps (https://cygnusstrategy.com/apps)
+- [GitHub](https://github.com/pid1)
+- [LinkedIn](https://linkedin.com/in/jroemer)
