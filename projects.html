@@ -44,16 +44,19 @@
       <div class="content-wrap">
         <main id="main">
           <h1>Projects</h1>
-
         <section class="project-group">
           <h2>Systems</h2>
           <article>
             <h3><a href="https://github.com/pid1/rally">rally</a></h3>
-            <p>Your family command center. Coordinate schedules, plan dinners, and tackle todos together.</p>
+            <p>Your family command center, self-hosted. One shared calendar, to-dos, a shopping list, dinner plans, packing lists and an emergency-kit inventory, plus an AI-written briefing every morning. Claude can read and change nearly all of it through an MCP connector, and every call lands in an audit log under whoever asked.</p>
           </article>
           <article>
             <h3><a href="https://github.com/pid1/tsundoku">tsundoku</a></h3>
-            <p>積ん読 — acquiring books and letting them pile up unread. A self-hosted OPDS catalog, upload UI, and KOReader-compatible progress sync server on one Cloudflare Worker.</p>
+            <p>積ん読: buying books and letting them pile up unread. This is somewhere to pile them. Drop in an EPUB or CBZ and it reads the title and cover, serves the library to your e-reader over OPDS 2.0, syncs your place with KOReader, and has a browser reader that picks up where KOReader left off. Private accounts, one Cloudflare Worker, free tier.</p>
+          </article>
+          <article>
+            <h3><a href="https://github.com/Cygnus-Strategy/sadr">sadr</a></h3>
+            <p>A dark factory for software, named for the star at the heart of Cygnus. On a schedule, with the lights off, it builds the issues you label <code>sadr</code>, keeps dependencies and CI current behind a week-long supply-chain cooldown, and fixes what the scanners find. Every change is tested and arrives as a pull request. Nothing merges until you say so.</p>
           </article>
           <article>
             <h3><a href="https://github.com/pid1/kosync-conformance">kosync-conformance</a></h3>
@@ -61,33 +64,33 @@
           </article>
           <article>
             <h3><a href="https://github.com/pid1/scram">scram</a></h3>
-            <p>Cloudflare has no hard spending limit. This is the missing kill switch: it prices your account's usage every 15 minutes and shuts everything off before the bill runs away.</p>
+            <p>Cloudflare has no hard spending limit. This is the missing kill switch: it prices your account's usage every 15 minutes and, past a line you set, cuts every Worker off the internet before the bill runs away. It never touches code or data, and one call puts it all back.</p>
           </article>
           <article>
             <h3><a href="https://github.com/pid1/rx">rx</a></h3>
-            <p>Receive-only comms for when the infrastructure isn't. Provisions a ClockworkPi uConsole go-box with SDR, LoRa mesh, and GPS-disciplined time that holds without a network.</p>
+            <p>Comms for when the infrastructure isn't. One idempotent script turns a ClockworkPi uConsole into a field receiver: one-command SDR profiles, receive-only JS8Call decoding, a Meshtastic node with offline maps, and GPS-disciplined time that holds without a network.</p>
           </article>
           <article>
             <h3><a href="https://github.com/pid1/reveille">reveille</a></h3>
-            <p>Your morning briefing when the network is on fire. Plaintext weather alerts, grid status, and local emergency feeds that load on degraded cell networks.</p>
+            <p>Your morning briefing when the network is on fire. One tiny plaintext page with no JavaScript, rebuilt before dawn: weather alerts, grid status, local police and fire feeds, and incidents within 25 miles, topped by a short AI summary that just says NSTR on quiet days and pushes to your phone when it isn't.</p>
           </article>
         </section>
         <section class="project-group">
           <h2>Machine learning</h2>
           <article>
             <h3><a href="https://github.com/pid1/voxthief">voxthief</a></h3>
-            <p>Steals every word off the airwaves. Transcribes and notifies on consumer hardware using whisper.cpp</p>
+            <p>Steals every word off the airwaves. Point it at an RTL-SDR or a radio plugged into your sound card and it transcribes each transmission locally with whisper.cpp, keeps the transcripts in SQLite, and pushes keyword matches to your phone. Terminal UI, or headless on a Raspberry Pi.</p>
           </article>
           <article>
             <h3><a href="https://github.com/pid1/tattoo">tattoo</a></h3>
-            <p>The evening counterpart to reveille. Watches a curated set of feeds, pulls the full content behind each new item, and uses an LLM to separate substance from filler.</p>
+            <p>The evening counterpart to reveille. Watches a curated set of feeds and YouTube channels, reads the full article or transcript behind each new item, and has Claude keep only what matches what you care about. What survives becomes a nightly briefing, every point linked to the paragraph or timestamp it came from. On a quiet day your phone hears nothing.</p>
           </article>
         </section>
         <section class="project-group">
           <h2>Applications and tools</h2>
           <article>
             <h3><a href="https://github.com/pid1/lgtm">lgtm</a></h3>
-            <p>Looks good to me. Approve Claude Code from the couch: a Miyoo Mini Plus chimes when an agent wants permission, shows what it wants and why, and takes an A or a B.</p>
+            <p>Looks good to me. Approve Claude Code from the couch: a Miyoo Mini Plus chimes when an agent wants permission, shows what it wants, why, and anything risky, and takes an A or a B. If the handheld is off, the prompt falls back to the computer that asked, never to yes.</p>
           </article>
           <article>
             <h3>leverage</h3>
@@ -95,7 +98,7 @@
           </article>
           <article>
             <h3><a href="https://github.com/pid1/hotslice">hotslice</a></h3>
-            <p>A hot take, one slice at a time. Turn Markdown into slide decks from the CLI, a web UI, or an MCP server.</p>
+            <p>A hot take, one slice at a time. Turn Markdown into a single self-contained HTML slide deck, with a couple hundred themes, from the CLI, a web UI, or an MCP server. Or skip the install and use the hosted one, MCP endpoint included, at <a href="https://hotslice.pid1.space">hotslice.pid1.space</a>.</p>
           </article>
           <article>
             <h3><a href="https://killcomplexity.com">kill complexity</a></h3>
@@ -103,76 +106,84 @@
           </article>
           <article>
             <h3><a href="https://github.com/pid1/puffin">puffin</a></h3>
-            <p>A lightweight baby tracking dashboard for the early days. Track feedings, diapers, and health.</p>
+            <p>A baby tracker for the early days, when nobody can remember which side was last. Logs feedings with a live breastfeeding timer, bottles, diapers, meds and temperatures for more than one kid, and exports to CSV, JSON or PDF. One container, one SQLite file.</p>
           </article>
           <article>
             <h3><a href="https://github.com/pid1/yeet">yeet</a></h3>
-            <p>A simple file upload service with memorable URLs. Files auto-expire after 7 days. Runs on Cloudflare Workers + R2.</p>
+            <p>For when you just need to throw a file at someone. One curl uploads it and hands back a short link like golden-phoenix. Files expire after 7 days. Runs on Cloudflare Workers + R2.</p>
           </article>
           <article>
             <h3><a href="https://github.com/pid1/pineapple">pineapple</a></h3>
-            <p>A sweet and tart resume generator. Converts Markdown files into modern PDF resumes parsable by AI/ATS systems.</p>
+            <p>A sweet and tart resume generator. Write your resume in Markdown and get a clean single-column PDF that ATS and AI screeners parse properly, with an optional video intro card and a writing guide your AI assistant can follow to draft it.</p>
           </article>
           <article>
             <h3><a href="https://github.com/pid1/twobraincells">twobraincells</a></h3>
-            <p>A minimally viable CSS library for text-first, accessible, resource intelligent websites.</p>
+            <p>A minimally viable CSS library for text-first, accessible, resource intelligent websites. One small stylesheet, no build step, and optional CSS-only snowflakes for December.</p>
           </article>
         </section>
         <section class="project-group">
           <h2>Hardware</h2>
           <article>
             <h3><a href="https://github.com/pid1/knee-deep-in-the-crib">knee-deep-in-the-crib</a></h3>
-            <p>A baby's night light that plays DOOM. Custom firmware for the Nanit Light &amp; Sound: E1M1 as a chiptune with the lamp flashing red on the beat, "dOOM" on the clock, and a shotgun-and-BFG interlude between loops.</p>
+            <p>A baby's night light that plays DOOM. Custom firmware for the Nanit Light &amp; Sound: E1M1 as a chiptune with the lamp flashing red on the beat, "dOOM" on the clock, and a shotgun-and-BFG interlude between loops. Flashes over USB-C with no soldering, after backing up the stock firmware.</p>
           </article>
           <article>
             <h3><a href="https://github.com/pid1/patrIoT">patrIoT</a></h3>
-            <p>Daily AI generated patriotic images on the Adafruit MagTag e-ink display.</p>
+            <p>The Internet of Things, but make it patriotic. Press a button on an Adafruit MagTag and it lights up red, white and blue, plays the opening of the Star-Spangled Banner, and pulls down an AI-drawn bald eagle, Lincoln or Saturn V onto the e-ink screen. The archive lives at <a href="https://patriot.pid1.space">patriot.pid1.space</a>.</p>
           </article>
           <article>
             <h3><a href="https://github.com/pid1/loam">loam</a></h3>
-            <p>A soil moisture sensor built on the Adafruit QT Py ESP32. Keeps your plants alive so you don't have to think about it.</p>
+            <p>A plant that pings your phone when it's thirsty. CircuitPython on an Adafruit QT Py ESP32-S3 with a capacitive soil sensor, no soldering: it wakes once a day, sends a Pushover alert only if the soil is dry, and goes back to deep sleep for months on one battery.</p>
           </article>
           <article>
             <h3><a href="https://github.com/pid1/fridgefriend">fridgefriend</a></h3>
-            <p>Tamagotchi-style companion built for the Adafruit MagTag e-ink display. Play, pet, feed, and put your dino to sleep.</p>
+            <p>A virtual pet for your fridge. A CircuitPython Tamagotchi for the Adafruit MagTag e-ink display: four buttons play with, pet, feed or tuck in a chibi dino, each with its own tune. It deep-sleeps between visits with its face still on screen, so it lives on battery, and it looks sleepy after 6 PM.</p>
           </article>
         </section>
         <section class="project-group">
           <h2>Smaller things</h2>
           <article>
             <h3><a href="https://github.com/pid1/kunnandi">kunnandi</a></h3>
-            <p>From Old Norse for &quot;knowledge.&quot; A living repository of dictum.</p>
+            <p>From Old Norse for &quot;knowledge.&quot; A living repository of dictum: short essays on decisions, complexity, leadership, quiet software and AI, revised in place instead of blogged once.</p>
+          </article>
+          <article>
+            <h3><a href="https://github.com/pid1/recipes">recipes</a></h3>
+            <p>A family cookbook in version control, so every pecan pie has a commit history. About fifty recipes in one Markdown file, typeset into a PDF with pandoc and LaTeX and published as a new release on every push.</p>
           </article>
           <article>
             <h3><a href="https://github.com/pid1/duck">duck</a></h3>
-            <p>An HTML-based URL shortener for static sites. Run it out of places like GitHub Pages.</p>
+            <p>A URL shortener with no server, no database and no tracking. A small Python script writes one tiny HTML redirect per link into your static site, ready to push to GitHub Pages.</p>
           </article>
           <article>
             <h3><a href="https://github.com/pid1/whelp">whelp</a></h3>
-            <p>The Mythical Mammal-Month. A single-page web app that applies Brooks's Law to the animal kingdom using real gestation periods.</p>
+            <p>The Mythical Mammal-Month. Nine women can't make a baby in one month, and 22 elephants can't make a calf in one either: a one-page site that applies Brooks's Law to 43 mammals using their real gestation periods. Live at <a href="https://brookszoo.online/">brookszoo.online</a>.</p>
           </article>
           <article>
             <h3><a href="https://github.com/pid1/stayinalive">stayinalive</a></h3>
-            <p>Conway's Game of Life with disco visuals in your terminal. Keeps your Mac awake so the party never stops.</p>
+            <p>Conway's Game of Life with disco visuals in your terminal, set to a beat in BPM. It keeps your Mac awake with caffeinate, and when the board dies or settles into still lifes and blinkers it reseeds itself, so the party never stops.</p>
           </article>
           <article>
             <h3><a href="https://github.com/pid1/bonk">bonk</a></h3>
-            <p>A bouncing DVD logo screensaver for Windows.</p>
+            <p>Turns your Windows PC into a 2004 DVD player on standby. A bouncing DVD logo screensaver that changes color on every wall hit and runs one logo per monitor, so you can watch several of them miss the corner at once.</p>
+          </article>
+          <article>
+            <h3><a href="https://github.com/pid1/strangerduino">strangerduino</a></h3>
+            <p>The Upside Down, ported to Arduino. Drives a 100-bulb WS2811 string with FastLED and spells HELP, then RUN, one red bulb at a time, with a burst of Christmas colors in between.</p>
           </article>
         </section>
         <section class="project-group">
           <h2>Inactive</h2>
           <article>
             <h3><a href="https://github.com/pid1/textmaxxing">textmaxxing</a></h3>
-            <p>Your SMS grindset coach. Touching grass optional. Enables SMS conversations with Claude via Twilio.</p>
+            <p>Your SMS grindset coach. Touching grass optional. A small webhook that puts Claude behind a Twilio number, keeps replies text-sized, remembers the last 20 messages, and can be set to answer only your number.</p>
           </article>
           <article>
             <h3><a href="https://github.com/pid1/promptchad">promptchad</a></h3>
-            <p>Web UI to test prompts across multiple AI providers and compare results.</p>
+            <p>Which prompt lifts more? Runs two prompt variants against OpenAI, Anthropic and Gemini and shows the answers side by side, in a small Flask web UI with a CLI alongside.</p>
           </article>
           <article>
             <h3><a href="https://github.com/pid1/test-sec-flags">test-sec-flags</a></h3>
-            <p>Performance testing of security-oriented compilation flags for Arch Linux.</p>
+            <p>Would turning on PIE, full RELRO and friends make every Arch package slower? These scripts benchmarked xz, UnixBench and ffmpeg under eight hardening-flag combinations so volunteers could compare machines. In October 2016 Arch announced it would turn the flags on.</p>
           </article>
         </section>
         </main>
