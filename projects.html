@@ -68,7 +68,11 @@
           </article>
           <article>
             <h3><a href="https://github.com/pid1/rx">rx</a></h3>
-            <p>Comms for when the infrastructure isn't. One idempotent script turns a ClockworkPi uConsole into a field receiver: one-command SDR profiles, receive-only JS8Call decoding, a Meshtastic node with offline maps, and GPS-disciplined time that holds without a network.</p>
+            <p>Comms for when the infrastructure isn't. One idempotent script turns a ClockworkPi uConsole into a field station: rxd as its receiver, a Meshtastic node with offline maps, and GPS-disciplined time that holds without a network.</p>
+          </article>
+          <article>
+            <h3><a href="https://github.com/pid1/rxd">rxd</a></h3>
+            <p>A whole receive station in a fifth of a Raspberry Pi core. One RTL-SDR behind an HTTP API, with its own JS8 decoder and WSPR via wsprd: it picks the band from conditions and the hour, reports WSPR spots, sets its own gain, and maps every station it hears on offline tiles. Receive only. A phone-sized web UI and a terminal UI come with it, or bring your own client.</p>
           </article>
           <article>
             <h3><a href="https://github.com/pid1/reveille">reveille</a></h3>
