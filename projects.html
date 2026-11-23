@@ -16,6 +16,9 @@
     <meta property="og:url" content="https://pid1.space/projects" />
     <meta name="twitter:card" content="summary" />
     <meta name="color-scheme" content="light dark" />
+    <script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+    <link rel="preload" href="fonts/AtkinsonHyperlegibleNext-Variable.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="fonts/Archivo-500-700.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="style.css" />
     <script src="theme.js" defer></script>
     <script type="speculationrules">
@@ -24,197 +27,226 @@
   </head>
   <body>
     <a href="#main" class="visually-hidden">Skip to content</a>
-    <div class="page-wrapper">
-      <header>
-        <nav>
+    <header class="masthead">
+      <div class="wrap masthead-inner">
+        <a class="masthead-name" href="/">Jonathan Roemer</a>
+        <nav aria-label="Main">
           <a href="/">Home</a>
           <a href="/about">About</a>
           <a href="/projects" aria-current="page">Projects</a>
           <a href="/contact">Contact</a>
-          <button
-            class="theme-toggle"
-            id="theme-toggle"
-            onclick="toggleTheme()"
-            type="button"
-          >
-            [dark]
-          </button>
         </nav>
-      </header>
-      <div class="content-wrap">
-        <main id="main">
-          <h1>Projects</h1>
+      </div>
+    </header>
+    <div class="wrap content-wrap">
+      <main id="main">
+        <h1>Projects</h1>
         <section class="project-group">
           <h2>Systems</h2>
-          <article>
-            <h3><a href="https://github.com/pid1/rally">rally</a></h3>
-            <p>Your family command center, self-hosted. One shared calendar, to-dos, a shopping list, dinner plans, packing lists and an emergency-kit inventory, plus an AI-written briefing every morning. Claude can read and change nearly all of it through an MCP connector, and every call lands in an audit log under whoever asked.</p>
-          </article>
-          <article>
-            <h3><a href="https://github.com/pid1/tsundoku">tsundoku</a></h3>
-            <p>積ん読: buying books and letting them pile up unread. This is somewhere to pile them. Drop in an EPUB or CBZ and it reads the title and cover, serves the library to your e-reader over OPDS 2.0, syncs your place with KOReader, and has a browser reader that picks up where KOReader left off. Private accounts, one Cloudflare Worker, free tier.</p>
-          </article>
-          <article>
-            <h3><a href="https://github.com/Cygnus-Strategy/sadr">sadr</a></h3>
-            <p>A dark factory for software, named for the star at the heart of Cygnus. On a schedule, with the lights off, it builds the issues you label <code>sadr</code>, keeps dependencies and CI current behind a week-long supply-chain cooldown, and fixes what the scanners find. Every change is tested and arrives as a pull request. Nothing merges until you say so.</p>
-          </article>
-          <article>
-            <h3><a href="https://github.com/pid1/kosync-conformance">kosync-conformance</a></h3>
-            <p>KOReader's sync protocol went eight years without a spec. This is one, with every claim cited to source, plus a zero-dependency verifier that tells you where your server disagrees.</p>
-          </article>
-          <article>
-            <h3><a href="https://github.com/pid1/scram">scram</a></h3>
-            <p>Cloudflare has no hard spending limit. This is the missing kill switch: it prices your account's usage every 15 minutes and, past a line you set, cuts every Worker off the internet before the bill runs away. It never touches code or data, and one call puts it all back.</p>
-          </article>
-          <article>
-            <h3><a href="https://github.com/pid1/rx">rx</a></h3>
-            <p>Comms for when the infrastructure isn't. One idempotent script turns a ClockworkPi uConsole into a field station: rxd as its receiver, a Meshtastic node with offline maps, and GPS-disciplined time that holds without a network.</p>
-          </article>
-          <article>
-            <h3><a href="https://github.com/pid1/rxd">rxd</a></h3>
-            <p>A whole receive station in a fifth of a Raspberry Pi core. One RTL-SDR behind an HTTP API, with its own JS8 decoder and WSPR via wsprd: it picks the band from conditions and the hour, reports WSPR spots, sets its own gain, and maps every station it hears on offline tiles. Receive only. A phone-sized web UI and a terminal UI come with it, or bring your own client.</p>
-          </article>
-          <article>
-            <h3><a href="https://github.com/pid1/reveille">reveille</a></h3>
-            <p>Your morning briefing when the network is on fire. One tiny plaintext page with no JavaScript, rebuilt before dawn: weather alerts, grid status, local police and fire feeds, and incidents within 25 miles, topped by a short AI summary that just says NSTR on quiet days and pushes to your phone when it isn't.</p>
-          </article>
-          <article>
-            <h3><a href="https://github.com/pid1/tattoo">tattoo</a></h3>
-            <p>The evening counterpart to reveille. Watches a curated set of feeds and YouTube channels, reads the full article or transcript behind each new item, and has Claude keep only what matches what you care about. What survives becomes a nightly briefing, every point linked to the paragraph or timestamp it came from. On a quiet day your phone hears nothing.</p>
-          </article>
+          <div class="project-list">
+            <article>
+              <h3><a href="https://github.com/pid1/rally">rally</a></h3>
+              <p>Your family command center, self-hosted. One shared calendar, to-dos, a shopping list, dinner plans, packing lists and an emergency-kit inventory, plus an AI-written briefing every morning. Claude can read and change nearly all of it through an MCP connector, and every call lands in an audit log under whoever asked.</p>
+              <p class="project-meta">github.com/pid1/rally</p>
+            </article>
+            <article>
+              <h3><a href="https://github.com/pid1/tsundoku">tsundoku</a></h3>
+              <p>積ん読: buying books and letting them pile up unread. This is somewhere to pile them. Drop in an EPUB or CBZ and it reads the title and cover, serves the library to your e-reader over OPDS 2.0, syncs your place with KOReader, and has a browser reader that picks up where KOReader left off. Private accounts, one Cloudflare Worker, free tier.</p>
+              <p class="project-meta">github.com/pid1/tsundoku</p>
+            </article>
+            <article>
+              <h3><a href="https://github.com/Cygnus-Strategy/sadr">sadr</a></h3>
+              <p>A dark factory for software, named for the star at the heart of Cygnus. On a schedule, with the lights off, it builds the issues you label <code>sadr</code>, keeps dependencies and CI current behind a week-long supply-chain cooldown, and fixes what the scanners find. Every change is tested and arrives as a pull request. Nothing merges until you say so.</p>
+              <p class="project-meta">github.com/Cygnus-Strategy/sadr</p>
+            </article>
+            <article>
+              <h3><a href="https://github.com/pid1/kosync-conformance">kosync-conformance</a></h3>
+              <p>KOReader's sync protocol went eight years without a spec. This is one, with every claim cited to source, plus a zero-dependency verifier that tells you where your server disagrees.</p>
+              <p class="project-meta">github.com/pid1/kosync-conformance</p>
+            </article>
+            <article>
+              <h3><a href="https://github.com/pid1/scram">scram</a></h3>
+              <p>Cloudflare has no hard spending limit. This is the missing kill switch: it prices your account's usage every 15 minutes and, past a line you set, cuts every Worker off the internet before the bill runs away. It never touches code or data, and one call puts it all back.</p>
+              <p class="project-meta">github.com/pid1/scram</p>
+            </article>
+            <article>
+              <h3><a href="https://github.com/pid1/rx">rx</a></h3>
+              <p>Comms for when the infrastructure isn't. One idempotent script turns a ClockworkPi uConsole into a field station: rxd as its receiver, a Meshtastic node with offline maps, and GPS-disciplined time that holds without a network.</p>
+              <p class="project-meta">github.com/pid1/rx</p>
+            </article>
+            <article>
+              <h3><a href="https://github.com/pid1/rxd">rxd</a></h3>
+              <p>A whole receive station in a fifth of a Raspberry Pi core. One RTL-SDR behind an HTTP API, with its own JS8 decoder and WSPR via wsprd: it picks the band from conditions and the hour, reports WSPR spots, sets its own gain, and maps every station it hears on offline tiles. Receive only. A phone-sized web UI and a terminal UI come with it, or bring your own client.</p>
+              <p class="project-meta">github.com/pid1/rxd</p>
+            </article>
+            <article>
+              <h3><a href="https://github.com/pid1/reveille">reveille</a></h3>
+              <p>Your morning briefing when the network is on fire. One tiny plaintext page with no JavaScript, rebuilt before dawn: weather alerts, grid status, local police and fire feeds, and incidents within 25 miles, topped by a short AI summary that just says NSTR on quiet days and pushes to your phone when it isn't.</p>
+              <p class="project-meta">github.com/pid1/reveille</p>
+            </article>
+            <article>
+              <h3><a href="https://github.com/pid1/tattoo">tattoo</a></h3>
+              <p>The evening counterpart to reveille. Watches a curated set of feeds and YouTube channels, reads the full article or transcript behind each new item, and has Claude keep only what matches what you care about. What survives becomes a nightly briefing, every point linked to the paragraph or timestamp it came from. On a quiet day your phone hears nothing.</p>
+              <p class="project-meta">github.com/pid1/tattoo</p>
+            </article>
+          </div>
         </section>
         <section class="project-group">
           <h2>Applications and tools</h2>
-          <article>
-            <h3>leverage</h3>
-            <p>Exploits Kalshi mispricing for profit. The math is sound. The vibes are immaculate.</p>
-          </article>
-          <article>
-            <h3><a href="https://github.com/pid1/onhold">onhold</a></h3>
-            <p>Sits on hold so you don't. Brief it from Claude and an AI voice agent makes the call for you: it says up front that it's an AI calling on your behalf, asks your questions, and writes down the answers. Nothing dials until you approve the exact call, and the report waits for Claude when it hangs up. Runs on Cloudflare's free tier with ElevenLabs and Twilio.</p>
-          </article>
-          <article>
-            <h3><a href="https://github.com/pid1/pineapple">pineapple</a></h3>
-            <p>A sweet and tart resume generator. Write your resume in Markdown and get a clean single-column PDF that ATS and AI screeners parse properly, with an optional video intro card and a writing guide your AI assistant can follow to draft it.</p>
-          </article>
+          <div class="project-list">
+            <article>
+              <h3>leverage</h3>
+              <p>Exploits Kalshi mispricing for profit. The math is sound. The vibes are immaculate.</p>
+            </article>
+            <article>
+              <h3><a href="https://github.com/pid1/onhold">onhold</a></h3>
+              <p>Sits on hold so you don't. Brief it from Claude and an AI voice agent makes the call for you: it says up front that it's an AI calling on your behalf, asks your questions, and writes down the answers. Nothing dials until you approve the exact call, and the report waits for Claude when it hangs up. Runs on Cloudflare's free tier with ElevenLabs and Twilio.</p>
+              <p class="project-meta">github.com/pid1/onhold</p>
+            </article>
+            <article>
+              <h3><a href="https://github.com/pid1/pineapple">pineapple</a></h3>
+              <p>A sweet and tart resume generator. Write your resume in Markdown and get a clean single-column PDF that ATS and AI screeners parse properly, with an optional video intro card and a writing guide your AI assistant can follow to draft it.</p>
+              <p class="project-meta">github.com/pid1/pineapple</p>
+            </article>
+          </div>
         </section>
         <section class="project-group">
           <h2>Hardware</h2>
-          <article>
-            <h3><a href="https://github.com/pid1/loam">loam</a></h3>
-            <p>A plant that pings your phone when it's thirsty. CircuitPython on an Adafruit QT Py ESP32-S3 with a capacitive soil sensor, no soldering: it wakes once a day, sends a Pushover alert only if the soil is dry, and goes back to deep sleep for months on one battery.</p>
-          </article>
+          <div class="project-list">
+            <article>
+              <h3><a href="https://github.com/pid1/loam">loam</a></h3>
+              <p>A plant that pings your phone when it's thirsty. CircuitPython on an Adafruit QT Py ESP32-S3 with a capacitive soil sensor, no soldering: it wakes once a day, sends a Pushover alert only if the soil is dry, and goes back to deep sleep for months on one battery.</p>
+              <p class="project-meta">github.com/pid1/loam</p>
+            </article>
+          </div>
         </section>
         <section class="project-group">
           <h2>Smaller things</h2>
-          <article>
-            <h3><a href="https://github.com/pid1/kunnandi">kunnandi</a></h3>
-            <p>From Old Norse for &quot;knowledge.&quot; A living repository of dictum: short essays on decisions, complexity, leadership, quiet software and AI, revised in place instead of blogged once.</p>
-          </article>
-          <article>
-            <h3><a href="https://github.com/pid1/recipes">recipes</a></h3>
-            <p>A family cookbook in version control, so every pecan pie has a commit history. About fifty recipes in one Markdown file, typeset into a PDF with pandoc and LaTeX and published as a new release on every push.</p>
-          </article>
+          <div class="project-list">
+            <article>
+              <h3><a href="https://github.com/pid1/kunnandi">kunnandi</a></h3>
+              <p>From Old Norse for &quot;knowledge.&quot; A living repository of dictum: short essays on decisions, complexity, leadership, quiet software and AI, revised in place instead of blogged once.</p>
+              <p class="project-meta">github.com/pid1/kunnandi</p>
+            </article>
+            <article>
+              <h3><a href="https://github.com/pid1/recipes">recipes</a></h3>
+              <p>A family cookbook in version control, so every pecan pie has a commit history. About fifty recipes in one Markdown file, typeset into a PDF with pandoc and LaTeX and published as a new release on every push.</p>
+              <p class="project-meta">github.com/pid1/recipes</p>
+            </article>
+          </div>
         </section>
         <section class="project-group">
           <h2>Inactive</h2>
-          <article>
-            <h3><a href="https://github.com/pid1/textmaxxing">textmaxxing</a></h3>
-            <p>Your SMS grindset coach. Touching grass optional. A small webhook that puts Claude behind a Twilio number, keeps replies text-sized, remembers the last 20 messages, and can be set to answer only your number.</p>
-          </article>
-          <article>
-            <h3><a href="https://github.com/pid1/promptchad">promptchad</a></h3>
-            <p>Which prompt lifts more? Runs two prompt variants against OpenAI, Anthropic and Gemini and shows the answers side by side, in a small Flask web UI with a CLI alongside.</p>
-          </article>
-          <article>
-            <h3><a href="https://github.com/pid1/test-sec-flags">test-sec-flags</a></h3>
-            <p>Would turning on PIE, full RELRO and friends make every Arch package slower? These scripts benchmarked xz, UnixBench and ffmpeg under eight hardening-flag combinations so volunteers could compare machines. In October 2016 Arch announced it would turn the flags on.</p>
-          </article>
-          <article>
-            <h3><a href="https://github.com/pid1/voxthief">voxthief</a></h3>
-            <p>Steals every word off the airwaves. Point it at an RTL-SDR or a radio plugged into your sound card and it transcribes each transmission locally with whisper.cpp, keeps the transcripts in SQLite, and pushes keyword matches to your phone. Terminal UI, or headless on a Raspberry Pi.</p>
-          </article>
-          <article>
-            <h3><a href="https://github.com/pid1/lgtm">lgtm</a></h3>
-            <p>Looks good to me. Approve Claude Code from the couch: a Miyoo Mini Plus chimes when an agent wants permission, shows what it wants, why, and anything risky, and takes an A or a B. If the handheld is off, the prompt falls back to the computer that asked, never to yes.</p>
-          </article>
-          <article>
-            <h3><a href="https://github.com/pid1/hotslice">hotslice</a></h3>
-            <p>A hot take, one slice at a time. Turn Markdown into a single self-contained HTML slide deck, with a couple hundred themes, from the CLI, a web UI, or an MCP server.</p>
-          </article>
-          <article>
-            <h3><a href="https://github.com/pid1/puffin">puffin</a></h3>
-            <p>A baby tracker for the early days, when nobody can remember which side was last. Logs feedings with a live breastfeeding timer, bottles, diapers, meds and temperatures for more than one kid, and exports to CSV, JSON or PDF. One container, one SQLite file.</p>
-          </article>
-          <article>
-            <h3><a href="https://github.com/pid1/yeet">yeet</a></h3>
-            <p>For when you just need to throw a file at someone. One curl uploads it and hands back a short link like golden-phoenix. Files expire after 7 days. Runs on Cloudflare Workers + R2.</p>
-          </article>
-          <article>
-            <h3><a href="https://github.com/pid1/twobraincells">twobraincells</a></h3>
-            <p>A minimally viable CSS library for text-first, accessible, resource intelligent websites. One small stylesheet, no build step, and optional CSS-only snowflakes for December.</p>
-          </article>
-          <article>
-            <h3><a href="https://github.com/pid1/patrIoT">patrIoT</a></h3>
-            <p>The Internet of Things, but make it patriotic. Press a button on an Adafruit MagTag and it lights up red, white and blue, plays the opening of the Star-Spangled Banner, and pulls down an AI-drawn bald eagle, Lincoln or Saturn V onto the e-ink screen.</p>
-          </article>
-          <article>
-            <h3><a href="https://github.com/pid1/fridgefriend">fridgefriend</a></h3>
-            <p>A virtual pet for your fridge. A CircuitPython Tamagotchi for the Adafruit MagTag e-ink display: four buttons play with, pet, feed or tuck in a chibi dino, each with its own tune. It deep-sleeps between visits with its face still on screen, so it lives on battery, and it looks sleepy after 6 PM.</p>
-          </article>
-          <article>
-            <h3><a href="https://github.com/pid1/knee-deep-in-the-crib">knee-deep-in-the-crib</a></h3>
-            <p>A baby's night light that plays DOOM. Custom firmware for the Nanit Light &amp; Sound: E1M1 as a chiptune with the lamp flashing red on the beat, "dOOM" on the clock, and a shotgun-and-BFG interlude between loops. Flashes over USB-C with no soldering, after backing up the stock firmware.</p>
-          </article>
-          <article>
-            <h3><a href="https://github.com/pid1/duck">duck</a></h3>
-            <p>A URL shortener with no server, no database and no tracking. A small Python script writes one tiny HTML redirect per link into your static site, ready to push to GitHub Pages.</p>
-          </article>
-          <article>
-            <h3><a href="https://github.com/pid1/whelp">whelp</a></h3>
-            <p>The Mythical Mammal-Month. Nine women can't make a baby in one month, and 22 elephants can't make a calf in one either: a one-page site that applies Brooks's Law to 43 mammals using their real gestation periods. Live at <a href="https://brookszoo.pid1.space/">brookszoo.pid1.space</a>.</p>
-          </article>
-          <article>
-            <h3><a href="https://github.com/pid1/stayinalive">stayinalive</a></h3>
-            <p>Conway's Game of Life with disco visuals in your terminal, set to a beat in BPM. It keeps your Mac awake with caffeinate, and when the board dies or settles into still lifes and blinkers it reseeds itself, so the party never stops.</p>
-          </article>
-          <article>
-            <h3><a href="https://github.com/pid1/strangerduino">strangerduino</a></h3>
-            <p>The Upside Down, ported to Arduino. Drives a 100-bulb WS2811 string with FastLED and spells HELP, then RUN, one red bulb at a time, with a burst of Christmas colors in between.</p>
-          </article>
-          <article>
-            <h3><a href="https://github.com/pid1/bonk">bonk</a></h3>
-            <p>Turns your Windows PC into a 2004 DVD player on standby. A bouncing DVD logo screensaver that changes color on every wall hit and runs one logo per monitor, so you can watch several of them miss the corner at once.</p>
-          </article>
-          <article>
-            <h3><a href="https://killcomplexity.com">kill complexity</a></h3>
-            <p>Cytracom's April Fools 2026 Playdate game.</p>
-          </article>
+          <div class="project-list">
+            <article>
+              <h3><a href="https://github.com/pid1/textmaxxing">textmaxxing</a></h3>
+              <p>Your SMS grindset coach. Touching grass optional. A small webhook that puts Claude behind a Twilio number, keeps replies text-sized, remembers the last 20 messages, and can be set to answer only your number.</p>
+              <p class="project-meta">github.com/pid1/textmaxxing</p>
+            </article>
+            <article>
+              <h3><a href="https://github.com/pid1/promptchad">promptchad</a></h3>
+              <p>Which prompt lifts more? Runs two prompt variants against OpenAI, Anthropic and Gemini and shows the answers side by side, in a small Flask web UI with a CLI alongside.</p>
+              <p class="project-meta">github.com/pid1/promptchad</p>
+            </article>
+            <article>
+              <h3><a href="https://github.com/pid1/test-sec-flags">test-sec-flags</a></h3>
+              <p>Would turning on PIE, full RELRO and friends make every Arch package slower? These scripts benchmarked xz, UnixBench and ffmpeg under eight hardening-flag combinations so volunteers could compare machines. In October 2016 Arch announced it would turn the flags on.</p>
+              <p class="project-meta">github.com/pid1/test-sec-flags</p>
+            </article>
+            <article>
+              <h3><a href="https://github.com/pid1/voxthief">voxthief</a></h3>
+              <p>Steals every word off the airwaves. Point it at an RTL-SDR or a radio plugged into your sound card and it transcribes each transmission locally with whisper.cpp, keeps the transcripts in SQLite, and pushes keyword matches to your phone. Terminal UI, or headless on a Raspberry Pi.</p>
+              <p class="project-meta">github.com/pid1/voxthief</p>
+            </article>
+            <article>
+              <h3><a href="https://github.com/pid1/lgtm">lgtm</a></h3>
+              <p>Looks good to me. Approve Claude Code from the couch: a Miyoo Mini Plus chimes when an agent wants permission, shows what it wants, why, and anything risky, and takes an A or a B. If the handheld is off, the prompt falls back to the computer that asked, never to yes.</p>
+              <p class="project-meta">github.com/pid1/lgtm</p>
+            </article>
+            <article>
+              <h3><a href="https://github.com/pid1/hotslice">hotslice</a></h3>
+              <p>A hot take, one slice at a time. Turn Markdown into a single self-contained HTML slide deck, with a couple hundred themes, from the CLI, a web UI, or an MCP server.</p>
+              <p class="project-meta">github.com/pid1/hotslice</p>
+            </article>
+            <article>
+              <h3><a href="https://github.com/pid1/puffin">puffin</a></h3>
+              <p>A baby tracker for the early days, when nobody can remember which side was last. Logs feedings with a live breastfeeding timer, bottles, diapers, meds and temperatures for more than one kid, and exports to CSV, JSON or PDF. One container, one SQLite file.</p>
+              <p class="project-meta">github.com/pid1/puffin</p>
+            </article>
+            <article>
+              <h3><a href="https://github.com/pid1/yeet">yeet</a></h3>
+              <p>For when you just need to throw a file at someone. One curl uploads it and hands back a short link like golden-phoenix. Files expire after 7 days. Runs on Cloudflare Workers + R2.</p>
+              <p class="project-meta">github.com/pid1/yeet</p>
+            </article>
+            <article>
+              <h3><a href="https://github.com/pid1/twobraincells">twobraincells</a></h3>
+              <p>A minimally viable CSS library for text-first, accessible, resource intelligent websites. One small stylesheet, no build step, and optional CSS-only snowflakes for December.</p>
+              <p class="project-meta">github.com/pid1/twobraincells</p>
+            </article>
+            <article>
+              <h3><a href="https://github.com/pid1/patrIoT">patrIoT</a></h3>
+              <p>The Internet of Things, but make it patriotic. Press a button on an Adafruit MagTag and it lights up red, white and blue, plays the opening of the Star-Spangled Banner, and pulls down an AI-drawn bald eagle, Lincoln or Saturn V onto the e-ink screen.</p>
+              <p class="project-meta">github.com/pid1/patrIoT</p>
+            </article>
+            <article>
+              <h3><a href="https://github.com/pid1/fridgefriend">fridgefriend</a></h3>
+              <p>A virtual pet for your fridge. A CircuitPython Tamagotchi for the Adafruit MagTag e-ink display: four buttons play with, pet, feed or tuck in a chibi dino, each with its own tune. It deep-sleeps between visits with its face still on screen, so it lives on battery, and it looks sleepy after 6 PM.</p>
+              <p class="project-meta">github.com/pid1/fridgefriend</p>
+            </article>
+            <article>
+              <h3><a href="https://github.com/pid1/knee-deep-in-the-crib">knee-deep-in-the-crib</a></h3>
+              <p>A baby's night light that plays DOOM. Custom firmware for the Nanit Light &amp; Sound: E1M1 as a chiptune with the lamp flashing red on the beat, "dOOM" on the clock, and a shotgun-and-BFG interlude between loops. Flashes over USB-C with no soldering, after backing up the stock firmware.</p>
+              <p class="project-meta">github.com/pid1/knee-deep-in-the-crib</p>
+            </article>
+            <article>
+              <h3><a href="https://github.com/pid1/duck">duck</a></h3>
+              <p>A URL shortener with no server, no database and no tracking. A small Python script writes one tiny HTML redirect per link into your static site, ready to push to GitHub Pages.</p>
+              <p class="project-meta">github.com/pid1/duck</p>
+            </article>
+            <article>
+              <h3><a href="https://github.com/pid1/whelp">whelp</a></h3>
+              <p>The Mythical Mammal-Month. Nine women can't make a baby in one month, and 22 elephants can't make a calf in one either: a one-page site that applies Brooks's Law to 43 mammals using their real gestation periods. Live at <a href="https://brookszoo.pid1.space/">brookszoo.pid1.space</a>.</p>
+              <p class="project-meta">github.com/pid1/whelp</p>
+            </article>
+            <article>
+              <h3><a href="https://github.com/pid1/stayinalive">stayinalive</a></h3>
+              <p>Conway's Game of Life with disco visuals in your terminal, set to a beat in BPM. It keeps your Mac awake with caffeinate, and when the board dies or settles into still lifes and blinkers it reseeds itself, so the party never stops.</p>
+              <p class="project-meta">github.com/pid1/stayinalive</p>
+            </article>
+            <article>
+              <h3><a href="https://github.com/pid1/strangerduino">strangerduino</a></h3>
+              <p>The Upside Down, ported to Arduino. Drives a 100-bulb WS2811 string with FastLED and spells HELP, then RUN, one red bulb at a time, with a burst of Christmas colors in between.</p>
+              <p class="project-meta">github.com/pid1/strangerduino</p>
+            </article>
+            <article>
+              <h3><a href="https://github.com/pid1/bonk">bonk</a></h3>
+              <p>Turns your Windows PC into a 2004 DVD player on standby. A bouncing DVD logo screensaver that changes color on every wall hit and runs one logo per monitor, so you can watch several of them miss the corner at once.</p>
+              <p class="project-meta">github.com/pid1/bonk</p>
+            </article>
+            <article>
+              <h3><a href="https://killcomplexity.com">kill complexity</a></h3>
+              <p>Cytracom's April Fools 2026 Playdate game.</p>
+              <p class="project-meta">killcomplexity.com</p>
+            </article>
+          </div>
         </section>
-        </main>
-        <aside class="solar-widget">
-          <!-- Informational link to a third party; the host redirects to HTTPS. -->
-          <!-- nosemgrep: html.security.plaintext-http-link.plaintext-http-link -->
-          <a href="http://www.hamqsl.com/solar.html">
-            <img
-              src="http://www.hamqsl.com/solarn0nbh.php"
-              width="155"
-              height="530"
-              title="Click to add Solar-Terrestrial Data to your website!"
-              alt="Solar-Terrestrial Data"
-            />
-          </a>
-        </aside>
-      </div>
+      </main>
     </div>
-    <script src="https://storage.ko-fi.com/cdn/scripts/overlay-widget.js"></script>
-    <script>
-      kofiWidgetOverlay.draw('pid1', {
-        'type': 'floating-chat',
-        'floating-chat.donateButton.text': 'Support me',
-        'floating-chat.donateButton.background-color': '#f45d22',
-        'floating-chat.donateButton.text-color': '#fff'
-      });
-    </script>
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <a class="support" href="https://ko-fi.com/pid1" rel="me noopener">
+          <svg class="support-icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h12v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V9z"/><path d="M16 10h1.5a2.5 2.5 0 0 1 0 5H16"/><path d="M8 3.5c0 1 1 1.5 1 2.5M12 3.5c0 1 1 1.5 1 2.5"/></svg>
+          <span class="support-text"><span class="support-label">Support my work</span><span class="support-where">ko-fi.com/pid1</span></span>
+        </a>
+        <fieldset class="appearance" id="appearance" hidden>
+          <legend>Appearance</legend>
+          <div class="appearance-options">
+            <label><input type="radio" name="appearance" value="auto" checked /><span>Automatic</span></label>
+            <label><input type="radio" name="appearance" value="light" /><span>Light</span></label>
+            <label><input type="radio" name="appearance" value="dark" /><span>Dark</span></label>
+          </div>
+        </fieldset>
+      </div>
+    </footer>
   </body>
 </html>
