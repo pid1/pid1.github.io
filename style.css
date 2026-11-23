@@ -349,8 +349,10 @@ main > h2 {
   max-width: 100%;
 }
 
+/* Only the contact page carries the widget; the second column exists only
+   where it does. */
 @media (min-width: 900px) {
-  .content-wrap {
+  .content-wrap:has(.solar-widget) {
     grid-template-columns: minmax(0, 1fr) 155px;
   }
 }
