@@ -16,6 +16,9 @@
     <meta property="og:url" content="https://pid1.space/contact" />
     <meta name="twitter:card" content="summary" />
     <meta name="color-scheme" content="light dark" />
+    <script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+    <link rel="preload" href="fonts/AtkinsonHyperlegibleNext-Variable.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="fonts/Archivo-500-700.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="style.css" />
     <script src="theme.js" defer></script>
     <script type="speculationrules">
@@ -24,92 +27,98 @@
   </head>
   <body>
     <a href="#main" class="visually-hidden">Skip to content</a>
-    <div class="page-wrapper">
-      <header>
-        <nav>
+    <header class="masthead">
+      <div class="wrap masthead-inner">
+        <a class="masthead-name" href="/">Jonathan Roemer</a>
+        <nav aria-label="Main">
           <a href="/">Home</a>
           <a href="/about">About</a>
           <a href="/projects">Projects</a>
           <a href="/contact" aria-current="page">Contact</a>
-          <button
-            class="theme-toggle"
-            id="theme-toggle"
-            onclick="toggleTheme()"
-            type="button"
-          >
-            [dark]
-          </button>
         </nav>
-      </header>
-      <div class="content-wrap">
-        <main id="main">
-          <h1>Contact</h1>
-
-          <h2>On the Air</h2>
-          <p>
-            I am licensed as <a href="https://www.qrz.com/db/KA1PID">KA1PID</a>
-            (amateur) and WSOD974 (GMRS).
-          </p>
-          <ul>
-            <li>
-              <a href="https://dcara.net/repeaters/">W5NGU</a> 146.920 MHz
-              repeater, Denton, Texas.
-            </li>
-            <li>
-              AllStarLink node
-              <a href="https://stats.allstarlink.org/stats/46308/">46308</a>,
-              callsign KA1PID.
-            </li>
-            <li>
-              EchoLink node
-              <a
-                href="https://www.repeaterbook.com/repeaters/echolink/node_status.php?type=search&amp;node=41337"
-                class="leet-node"
-                >41337</a
-              >.
-            </li>
-          </ul>
-          <p>
-            <a href="mailto:KA1PID@pid1.space">KA1PID@PID1.SPACE</a> reaches me
-            directly. Hackers welcome. For business, recruiting, or sales, see
-            below.
-          </p>
-
-          <h2>Elsewhere</h2>
-          <ul>
-            <li>
-              Consulting is available through
-              <a href="https://cygnusstrategy.com">Cygnus Strategy</a>.
-            </li>
-            <li>
-              My project portfolio is at
-              <a href="/projects">pid1.space/projects</a>.
-            </li>
-            <li>My code is on <a href="https://github.com/pid1">GitHub</a>.</li>
-            <li>
-              I am on <a href="https://linkedin.com/in/jroemer">LinkedIn</a>.
-            </li>
-          </ul>
-          <p>
-            I do not maintain social media accounts. Any accounts claiming to be
-            me are fraudulent or abandoned.
-          </p>
-        </main>
-        <aside class="solar-widget">
-          <!-- Informational link to a third party; the host redirects to HTTPS. -->
-          <!-- nosemgrep: html.security.plaintext-http-link.plaintext-http-link -->
-          <a href="http://www.hamqsl.com/solar.html">
-            <img
-              src="http://www.hamqsl.com/solarn0nbh.php"
-              width="155"
-              height="530"
-              title="Click to add Solar-Terrestrial Data to your website!"
-              alt="Solar-Terrestrial Data"
-            />
-          </a>
-        </aside>
       </div>
+    </header>
+    <div class="wrap content-wrap">
+      <main id="main">
+        <h1>Contact</h1>
+
+        <h2>On the Air</h2>
+        <p>
+          I am licensed as <a href="https://www.qrz.com/db/KA1PID">KA1PID</a>
+          (amateur) and WSOD974 (GMRS).
+        </p>
+        <ul>
+          <li>
+            <a href="https://dcara.net/repeaters/">W5NGU</a> 146.920 MHz
+            repeater, Denton, Texas.
+          </li>
+          <li>
+            AllStarLink node
+            <a href="https://stats.allstarlink.org/stats/46308/">46308</a>,
+            callsign KA1PID.
+          </li>
+          <li>
+            EchoLink node
+            <a
+              href="https://www.repeaterbook.com/repeaters/echolink/node_status.php?type=search&amp;node=41337"
+              class="leet-node"
+              >41337</a
+            >.
+          </li>
+        </ul>
+        <p>
+          <a href="mailto:KA1PID@pid1.space">KA1PID@PID1.SPACE</a> reaches me
+          directly. Hackers welcome. For business, recruiting, or sales, see
+          below.
+        </p>
+
+        <h2>Elsewhere</h2>
+        <ul>
+          <li>
+            Consulting is available through
+            <a href="https://cygnusstrategy.com">Cygnus Strategy</a>.
+          </li>
+          <li>
+            My project portfolio is at
+            <a href="/projects">pid1.space/projects</a>.
+          </li>
+          <li>My code is on <a href="https://github.com/pid1">GitHub</a>.</li>
+          <li>
+            I am on <a href="https://linkedin.com/in/jroemer">LinkedIn</a>.
+          </li>
+        </ul>
+        <p>
+          I do not maintain social media accounts. Any accounts claiming to be
+          me are fraudulent or abandoned.
+        </p>
+      </main>
+      <aside class="solar-widget">
+        <!-- Informational link to a third party; the host redirects to HTTPS. -->
+        <!-- nosemgrep: html.security.plaintext-http-link.plaintext-http-link -->
+        <a href="http://www.hamqsl.com/solar.html">
+          <img
+            src="http://www.hamqsl.com/solarn0nbh.php"
+            width="155"
+            height="530"
+            title="Click to add Solar-Terrestrial Data to your website!"
+            alt="Solar-Terrestrial Data"
+          />
+        </a>
+      </aside>
     </div>
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <p class="footer-name">Jonathan Roemer</p>
+        <fieldset class="appearance" id="appearance" hidden>
+          <legend>Appearance</legend>
+          <div class="appearance-options">
+            <label><input type="radio" name="appearance" value="auto" checked /><span>Automatic</span></label>
+            <label><input type="radio" name="appearance" value="light" /><span>Light</span></label>
+            <label><input type="radio" name="appearance" value="dark" /><span>Dark</span></label>
+          </div>
+        </fieldset>
+      </div>
+    </footer>
     <script src="https://storage.ko-fi.com/cdn/scripts/overlay-widget.js"></script>
     <script>
       kofiWidgetOverlay.draw('pid1', {

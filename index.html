@@ -17,6 +17,9 @@
     <meta name="twitter:card" content="summary" />
     <meta name="color-scheme" content="light dark" />
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "@id": "https://pid1.space/#me", "name": "Jonathan Roemer", "url": "https://pid1.space/", "description": "Systems architect and engineering leader. Infrastructure, security, and AI.", "jobTitle": "Senior Principal Systems Architect", "worksFor": [{"@type": "Organization", "name": "Cytracom"}, {"@type": "Organization", "name": "Cygnus Strategy", "url": "https://cygnusstrategy.com/"}], "alumniOf": [{"@type": "CollegeOrUniversity", "name": "University of Connecticut"}, {"@type": "CollegeOrUniversity", "name": "Arcadia University"}], "sameAs": ["https://github.com/pid1", "https://linkedin.com/in/jroemer", "https://www.qrz.com/db/KA1PID"]}</script>
+    <script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+    <link rel="preload" href="fonts/AtkinsonHyperlegibleNext-Variable.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="fonts/Archivo-500-700.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="style.css" />
     <script src="theme.js" defer></script>
     <script type="speculationrules">
@@ -25,55 +28,61 @@
   </head>
   <body>
     <a href="#main" class="visually-hidden">Skip to content</a>
-    <div class="page-wrapper">
-      <header>
-        <nav>
+    <header class="masthead">
+      <div class="wrap masthead-inner">
+        <a class="masthead-name" href="/">Jonathan Roemer</a>
+        <nav aria-label="Main">
           <a href="/" aria-current="page">Home</a>
           <a href="/about">About</a>
           <a href="/projects">Projects</a>
           <a href="/contact">Contact</a>
-          <button
-            class="theme-toggle"
-            id="theme-toggle"
-            onclick="toggleTheme()"
-            type="button"
-          >
-            [dark]
-          </button>
         </nav>
-      </header>
-      <div class="content-wrap">
-        <main id="main">
-          <h1>Jonathan Roemer</h1>
-          <p>Systems architect and engineering leader</p>
-          <p>
-            I design, build, and run the systems that companies depend on, from
-            infrastructure and security to product and AI.
-          </p>
-          <p>
-            I believe in building things that last: systems, teams, and trust.
-          </p>
-          <p>
-            If you want someone who will tell you the truth, roll up their
-            sleeves, and stand with you when things get tough, you are in the
-            right place.
-          </p>
-        </main>
-        <aside class="solar-widget">
-          <!-- Informational link to a third party; the host redirects to HTTPS. -->
-          <!-- nosemgrep: html.security.plaintext-http-link.plaintext-http-link -->
-          <a href="http://www.hamqsl.com/solar.html">
-            <img
-              src="http://www.hamqsl.com/solarn0nbh.php"
-              width="155"
-              height="530"
-              title="Click to add Solar-Terrestrial Data to your website!"
-              alt="Solar-Terrestrial Data"
-            />
-          </a>
-        </aside>
       </div>
+    </header>
+    <div class="wrap content-wrap">
+      <main id="main">
+        <h1>Jonathan Roemer</h1>
+        <p class="standfirst">Systems architect and engineering leader</p>
+        <p>
+          I design, build, and run the systems that companies depend on, from
+          infrastructure and security to product and AI.
+        </p>
+        <p>
+          I believe in building things that last: systems, teams, and trust.
+        </p>
+        <p>
+          If you want someone who will tell you the truth, roll up their
+          sleeves, and stand with you when things get tough, you are in the
+          right place.
+        </p>
+      </main>
+      <aside class="solar-widget">
+        <!-- Informational link to a third party; the host redirects to HTTPS. -->
+        <!-- nosemgrep: html.security.plaintext-http-link.plaintext-http-link -->
+        <a href="http://www.hamqsl.com/solar.html">
+          <img
+            src="http://www.hamqsl.com/solarn0nbh.php"
+            width="155"
+            height="530"
+            title="Click to add Solar-Terrestrial Data to your website!"
+            alt="Solar-Terrestrial Data"
+          />
+        </a>
+      </aside>
     </div>
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <p class="footer-name">Jonathan Roemer</p>
+        <fieldset class="appearance" id="appearance" hidden>
+          <legend>Appearance</legend>
+          <div class="appearance-options">
+            <label><input type="radio" name="appearance" value="auto" checked /><span>Automatic</span></label>
+            <label><input type="radio" name="appearance" value="light" /><span>Light</span></label>
+            <label><input type="radio" name="appearance" value="dark" /><span>Dark</span></label>
+          </div>
+        </fieldset>
+      </div>
+    </footer>
     <script src="https://storage.ko-fi.com/cdn/scripts/overlay-widget.js"></script>
     <script>
       kofiWidgetOverlay.draw('pid1', {
