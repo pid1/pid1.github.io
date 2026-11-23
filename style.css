@@ -472,14 +472,6 @@ main > h2 {
   padding-block: 2rem;
 }
 
-/* Keep the appearance switch clear of the floating Ko-fi button, which sits
-   over the bottom-left corner on narrow screens. */
-@media (max-width: 899px) {
-  .footer-inner {
-    padding-bottom: 6.5rem;
-  }
-}
-
 .site-footer a {
   color: var(--stone-deep);
 }
@@ -488,11 +480,55 @@ main > h2 {
   outline-color: var(--verdigris-on-band);
 }
 
-.footer-name {
-  margin: 0;
+/* Support link: replaces Ko-fi's floating button with a quiet ghost button on
+   the band. Ko-fi's orange stays out; the cup and the destination carry it. */
+.site-footer a.support {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 3.5rem;
+  padding: 0.5rem 1.1rem 0.5rem 0.9rem;
+  border: 1px solid var(--slate-soft);
+  border-radius: 2px;
+  color: var(--stone-deep);
+  text-decoration: none;
+  transition: border-color 180ms var(--ease);
+}
+
+.support-icon {
+  flex: none;
+  color: var(--verdigris-on-band);
+}
+
+.support-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  line-height: 1.2;
+}
+
+.support-label {
   font-family: var(--font-display);
   font-weight: 600;
-  color: var(--stone-deep);
+  font-size: 0.95rem;
+  letter-spacing: -0.01em;
+}
+
+.support-where {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--slate-soft);
+}
+
+.site-footer a.support:hover {
+  border-color: var(--verdigris-on-band);
+}
+
+.site-footer a.support:hover .support-label {
+  text-decoration: underline;
+  text-decoration-color: var(--verdigris-on-band);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.3em;
 }
 
 /* Appearance switch: Automatic / Light / Dark. Hidden until theme.js runs,
