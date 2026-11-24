@@ -4,9 +4,10 @@
 
 ## Pages
 
-- [About](https://pid1.space/about): background, education and approach
-- [Projects](https://pid1.space/projects): personal projects in AI tooling, full-stack web apps, ham radio and cyber-physical hardware
-- [Contact](https://pid1.space/contact): email, GitHub, LinkedIn and ham radio nodes
+- [Home](https://pid1.space/index.md): who he is, in a few lines
+- [About](https://pid1.space/about.md): background, education and approach
+- [Projects](https://pid1.space/projects.md): personal projects in AI tooling, full-stack web apps, ham radio and cyber-physical hardware, and the apps made by Cygnus Strategy
+- [Contact](https://pid1.space/contact.md): email, GitHub, LinkedIn and ham radio nodes
 
 ## Elsewhere
 

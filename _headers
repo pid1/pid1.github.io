@@ -7,6 +7,17 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Strict-Transport-Security: max-age=31536000; includeSubDomains
 
+# Markdown copies of each page (scripts/page_md.py), for AI agents. Each page
+# links to its copy with <link rel="alternate" type="text/markdown">.
+/index.md
+  Content-Type: text/markdown; charset=utf-8
+/about.md
+  Content-Type: text/markdown; charset=utf-8
+/contact.md
+  Content-Type: text/markdown; charset=utf-8
+/projects.md
+  Content-Type: text/markdown; charset=utf-8
+
 # Read by .github/workflows/cf-fallback.yml to decide whether Cloudflare has
 # already published the current commit. A cached copy would make a deployed
 # site look stale and trigger a redundant deploy.

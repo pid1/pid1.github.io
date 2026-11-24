@@ -10,11 +10,13 @@ set -euo pipefail
 
 PAGES=(index.html about.html contact.html projects.html)
 ASSETS=(style.css theme.js robots.txt sitemap.xml llms.txt)
+# Markdown copies of the pages, written by scripts/page_md.py and committed.
+MARKDOWN=(index.md about.md contact.md projects.md)
 
 rm -rf dist
 mkdir -p dist
 
-for f in "${PAGES[@]}" "${ASSETS[@]}"; do
+for f in "${PAGES[@]}" "${ASSETS[@]}" "${MARKDOWN[@]}"; do
   [ -f "$f" ] || { echo "missing $f" >&2; exit 1; }
   install -m 0644 "$f" "dist/$f"
 done
