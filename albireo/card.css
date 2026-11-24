@@ -1,0 +1,285 @@
+/* Albireo band conditions card. Drop this file and card.js into any site.
+   Cygnus Strategy design system: stone, paper, ink and slate; verdigris as the signal; amber only
+   for caution; rules, not boxes; 2px corners; no shadows or gradients.
+   Fonts: Archivo from Google Fonts if the host page loads it, otherwise system sans.
+   Theme: follows prefers-color-scheme. A host toggle wins when it sets data-theme="light" or
+   "dark" on <html>, or on the card element itself. */
+
+[data-band-card] {
+  /* Light (Cygnus day). */
+  --bc-ground: #e9e7e2;     /* stone */
+  --bc-ink: #15191f;        /* ink */
+  --bc-slate: #5a6472;      /* slate */
+  --bc-signal: #1f6f5c;     /* verdigris */
+  --bc-link: #175446;       /* verdigris deep */
+  --bc-caution: #8a5a12;    /* amber */
+  --bc-rule: rgba(21, 25, 31, 0.14);
+  --bc-rule-strong: #15191f;
+  --bc-font: "Archivo", "Helvetica Neue", Arial, sans-serif;
+
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 26rem;
+  min-width: 0;
+  margin: 0;
+  padding: 0.875rem 1rem 0.75rem;
+  border-top: 2px solid var(--bc-rule-strong);
+  border-radius: 2px;
+  background: var(--bc-ground);
+  color: var(--bc-ink);
+  font-family: var(--bc-font);
+  font-size: 1rem;
+  line-height: 1.35;
+  font-variant-numeric: tabular-nums lining-nums;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+/* Dark (Cygnus ink ground). */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) [data-band-card]:not([data-theme="light"]) {
+    --bc-ground: #1b2027;
+    --bc-ink: #e9e7e2;
+    --bc-slate: #a7b0bc;
+    --bc-signal: #5bbf9f;
+    --bc-link: #7fd0b5;
+    --bc-caution: #e2a94b;
+    --bc-rule: rgba(233, 231, 226, 0.16);
+    --bc-rule-strong: #e9e7e2;
+  }
+}
+:root[data-theme="dark"] [data-band-card]:not([data-theme="light"]),
+[data-band-card][data-theme="dark"] {
+  --bc-ground: #1b2027;
+  --bc-ink: #e9e7e2;
+  --bc-slate: #a7b0bc;
+  --bc-signal: #5bbf9f;
+  --bc-link: #7fd0b5;
+  --bc-caution: #e2a94b;
+  --bc-rule: rgba(233, 231, 226, 0.16);
+  --bc-rule-strong: #e9e7e2;
+}
+
+[data-band-card] *,
+[data-band-card] *::before,
+[data-band-card] *::after {
+  box-sizing: border-box;
+}
+
+/* Labels: Archivo 600, uppercase, tracked. */
+[data-band-card] .bc-title,
+[data-band-card] .bc-label,
+[data-band-card] caption,
+[data-band-card] th {
+  margin: 0;
+  font-family: var(--bc-font);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  line-height: 1.3;
+  text-transform: uppercase;
+  color: var(--bc-slate);
+}
+
+[data-band-card] .bc-title {
+  margin: 0 0 0.625rem;
+  color: var(--bc-ink);
+  font-size: 0.78rem;
+}
+
+[data-band-card] p {
+  margin: 0;
+  max-width: none;
+}
+
+/* Figures: three across, large and readable. */
+[data-band-card] .bc-figures {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-auto-rows: auto;
+  gap: 0 0.75rem;
+  margin: 0 0 0.125rem;
+  padding: 0;
+}
+[data-band-card] .bc-figures > div {
+  min-width: 0;
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 2;
+  row-gap: 0;
+}
+[data-band-card] .bc-figures dt {
+  align-self: end;
+}
+[data-band-card] dt {
+  margin: 0;
+}
+[data-band-card] dd {
+  margin: 0;
+}
+[data-band-card] .bc-figures dd {
+  padding-bottom: 0.75rem;
+}
+[data-band-card] .bc-figure {
+  display: block;
+  margin-top: 0.125rem;
+  font-size: 1.625rem;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+/* "No Data" is a state, set smaller so it never crowds a figure cell. */
+[data-band-card] .bc-nodata {
+  color: var(--bc-slate);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.75;
+  white-space: nowrap;
+}
+
+/* Ruled rows: an ink rule opens, hairlines separate. */
+[data-band-card] .bc-rows {
+  margin: 0 0 0.875rem;
+  padding: 0;
+  border-top: 1px solid var(--bc-rule-strong);
+}
+[data-band-card] .bc-rows > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.125rem 0.75rem;
+  padding: 0.4375rem 0;
+  border-bottom: 1px solid var(--bc-rule);
+}
+[data-band-card] .bc-rows dd {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-align: right;
+  margin-left: auto;
+}
+[data-band-card] .bc-rows dd .bc-nodata {
+  line-height: 1.35;
+}
+
+/* HF bands table. */
+[data-band-card] table {
+  width: 100%;
+  margin: 0 0 0.75rem;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+[data-band-card] caption {
+  padding: 0 0 0.375rem;
+  text-align: left;
+  color: var(--bc-ink);
+}
+[data-band-card] thead th {
+  padding: 0.375rem 0 0.3125rem;
+  border-top: 1px solid var(--bc-rule-strong);
+  border-bottom: 1px solid var(--bc-rule);
+  text-align: left;
+}
+[data-band-card] thead th:first-child {
+  width: 36%;
+}
+[data-band-card] tbody th,
+[data-band-card] td {
+  padding: 0.4375rem 0;
+  border-bottom: 1px solid var(--bc-rule);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-align: left;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+[data-band-card] tbody th {
+  font-size: 0.875rem;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--bc-ink);
+}
+[data-band-card] tbody tr:last-child > * {
+  border-bottom: 1px solid var(--bc-rule-strong);
+}
+[data-band-card] td.bc-nodata-row {
+  white-space: normal;
+}
+
+/* Status: always word plus symbol plus color. Symbols are drawn shapes, so no font can drop them. */
+[data-band-card] .bc-good { color: var(--bc-signal); }
+[data-band-card] .bc-fair { color: var(--bc-caution); }
+[data-band-card] .bc-poor { color: var(--bc-slate); }
+[data-band-card] .bc-storm { color: var(--bc-caution); }
+
+[data-band-card] .bc-sym {
+  position: relative;
+  display: inline-block;
+  width: 0.625em;
+  height: 0.625em;
+  margin-right: 0.375em;
+  border: 1.5px solid currentColor;
+  border-radius: 50%;
+  vertical-align: 0;
+  overflow: hidden;
+}
+[data-band-card] .bc-good .bc-sym { background: currentColor; }
+[data-band-card] .bc-fair .bc-sym::before {
+  content: "";
+  position: absolute;
+  inset: 0 50% 0 0;
+  background: currentColor;
+}
+[data-band-card] .bc-storm .bc-sym {
+  border: 0;
+  border-radius: 0;
+  background: currentColor;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+
+/* Attribution and links. */
+[data-band-card] .bc-attr {
+  font-size: 0.75rem;
+  line-height: 1.45;
+  color: var(--bc-slate);
+}
+[data-band-card] a {
+  color: var(--bc-link);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+[data-band-card] a:hover {
+  color: var(--bc-ink);
+}
+[data-band-card] a:focus-visible {
+  outline: 2px solid var(--bc-signal);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Static fallback before (or without) the script. */
+[data-band-card] .bc-fallback {
+  font-size: 0.9375rem;
+  line-height: 1.45;
+}
+[data-band-card] .bc-fallback + .bc-fallback {
+  margin-top: 0.5rem;
+}
+
+[data-band-card] .bc-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+[data-band-card] td .bc-nodata,
+[data-band-card] .bc-rows .bc-nodata {
+  line-height: inherit;
+}

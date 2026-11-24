@@ -9,12 +9,12 @@
 set -euo pipefail
 
 PAGES=(index.html about.html contact.html projects.html)
-ASSETS=(style.css theme.js robots.txt sitemap.xml llms.txt)
+ASSETS=(style.css theme.js robots.txt sitemap.xml llms.txt albireo/card.css albireo/card.js)
 # Markdown copies of the pages, written by scripts/page_md.py and committed.
 MARKDOWN=(index.md about.md contact.md projects.md)
 
 rm -rf dist
-mkdir -p dist
+mkdir -p dist dist/albireo
 
 for f in "${PAGES[@]}" "${ASSETS[@]}" "${MARKDOWN[@]}"; do
   [ -f "$f" ] || { echo "missing $f" >&2; exit 1; }

@@ -40,6 +40,12 @@ A dark factory for software, named for the star at the heart of Cygnus. On a sch
 
 github.com/Cygnus-Strategy/sadr
 
+### [Albireo](https://albireo.cygnusstrategy.com)
+
+Free live solar data and HF band conditions for apps and AI agents, as an API and MCP server, computed from NOAA and ITU data. No key needed, and the band conditions card on this site runs on it.
+
+albireo.cygnusstrategy.com
+
 ## Systems
 
 ### [rally](https://github.com/pid1/rally)

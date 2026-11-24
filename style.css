@@ -335,25 +335,30 @@ main > h2 {
   border-top: 1px solid var(--rule);
 }
 
-/* === Solar-terrestrial widget === */
+/* === Albireo band conditions card === */
 
-.solar-widget a {
-  display: inline-block;
+/* The card (albireo/card.css) drawn in this site's tokens and self-hosted
+   type, so it follows the Appearance switch and the OS with the rest of the
+   page. The id outranks card.css's own theme rules. Rules, not a box: the
+   card sits on the page ground with no side padding. */
+#band-card {
+  --bc-ground: var(--stone);
+  --bc-ink: var(--ink);
+  --bc-slate: var(--slate);
+  --bc-signal: var(--verdigris);
+  --bc-link: var(--verdigris-deep);
+  --bc-caution: var(--amber);
+  --bc-rule: var(--rule);
+  --bc-rule-strong: var(--ink);
+  --bc-font: var(--font-display);
+  padding-inline: 0;
 }
 
-.solar-widget img {
-  display: block;
-  width: 155px;
-  height: auto;
-  aspect-ratio: 155 / 530;
-  max-width: 100%;
-}
-
-/* Only the contact page carries the widget; the second column exists only
-   where it does. */
+/* Only the contact page carries the card; the second column exists only
+   where it does. Narrower than that, it follows the text. */
 @media (min-width: 900px) {
-  .content-wrap:has(.solar-widget) {
-    grid-template-columns: minmax(0, 1fr) 155px;
+  .content-wrap:has(.band-card-column) {
+    grid-template-columns: minmax(0, 1fr) 17.5rem;
   }
 }
 
@@ -679,7 +684,7 @@ main > h2 {
 
   .masthead nav,
   .site-footer,
-  .solar-widget {
+  .band-card-column {
     display: none;
   }
 
