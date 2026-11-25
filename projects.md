@@ -34,11 +34,11 @@ One place to find, run and grow nets, however people join: repeater, simplex, HF
 
 callboard.club
 
-### [sadr](https://github.com/Cygnus-Strategy/sadr)
+### [Sadr](https://sadr.cygnusstrategy.com)
 
 A dark factory for software, named for the star at the heart of Cygnus. On a schedule, with the lights off, it builds the issues you label `sadr`, keeps dependencies and CI current behind a week-long supply-chain cooldown, and fixes what the scanners find. Every change is tested and arrives as a pull request. Nothing merges until you say so.
 
-github.com/Cygnus-Strategy/sadr
+sadr.cygnusstrategy.com
 
 ### [Albireo](https://albireo.cygnusstrategy.com)
 
